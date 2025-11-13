@@ -2449,7 +2449,6 @@ img, video, canvas, svg {
     .project__content,
     .project__img,
     .section-title,
-    .about,
     .contact__card,
     .contact__cta,
     .footer {
@@ -2459,6 +2458,16 @@ img, video, canvas, svg {
 
     /* Hero title - show immediately without animation on mobile */
     .hero__title {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+
+    /* About section - show immediately without animation on mobile */
+    .about,
+    .unique-about,
+    .unique-container,
+    .unique-header,
+    .unique-main {
         opacity: 1 !important;
         animation: none !important;
     }
