@@ -1220,11 +1220,14 @@ img, video, canvas, svg {
 
 .contact__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 8rem;
     opacity: 1;
     visibility: visible;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact__card {
