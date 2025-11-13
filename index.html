@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hemant Kumar Dhangar - Full Stack Developer & Problem Solver. 200+ LeetCode problems solved, Smart India Hackathon Finalist.">
+    <meta name="theme-color" content="#6366f1">
+    <title>Hemant Kumar Dhangar — Developer & Creative</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Inter:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="premium-about.css">
+    
+    <!-- Optimized fonts - only essential weights -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Smooth Scroll Container -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <!-- Loader -->
+            <div class="loader">
+                <div class="loader__wrapper">
+                    <div class="loader__text">
+                        <span>H</span><span>E</span><span>M</span><span>A</span><span>N</span><span>T</span>
+                    </div>
+                    <div class="loader__counter">
+                        <span class="loader__counter-num">0</span>%
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cursor -->
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+            
+            <!-- Scroll Progress -->
+            <div class="scroll-progress">
+                <div class="scroll-progress__bar"></div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="nav">
+                <div class="nav__logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <text x="50%" y="50%" text-anchor="middle" dy=".35em" font-size="20" font-weight="700" fill="currentColor">HD</text>
+                    </svg>
+                </div>
+                <div class="nav__menu">
+                    <a href="#work" class="nav__link">Work</a>
+                    <a href="#about" class="nav__link">About</a>
+                    <a href="#contact" class="nav__link">Contact</a>
+                </div>
+                <div class="nav__cta">
+                    <a href="#contact" class="btn-magnetic">Let's Talk</a>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__label" data-scroll data-scroll-speed="1">
+                        <span class="dot"></span>
+                        <span>Available for opportunities</span>
+                    </div>
+                    
+                    <h1 class="hero__title">
+                        <div class="line">
+                            <div class="line__inner">CRAFTING</div>
+                        </div>
+                        <div class="line">
+                            <div class="line__inner">DIGITAL</div>
+                        </div>
+                        <div class="line hero__title--gradient">
+                            <div class="line__inner">EXPERIENCES</div>
+                        </div>
+                    </h1>
+
+                    <div class="hero__row">
+                        <div class="hero__text" data-scroll data-scroll-speed="0.8">
+                            <p class="hero__subtitle">Full-Stack Developer & Problem Solver based in India. I build exceptional web applications with a focus on performance, scalability, and user delight.</p>
+                        </div>
+                        <div class="hero__cta" data-scroll data-scroll-speed="0.8">
+                            <a href="#work" class="btn-primary btn-magnetic">
+                                <span>View Projects</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero__stats">
+                        <div class="stat" data-scroll data-scroll-speed="1.2">
+                            <div class="stat__number">200+</div>
+                            <div class="stat__label">LeetCode Solved</div>
+                        </div>
+                        <div class="stat" data-scroll data-scroll-speed="1.2">
+                            <div class="stat__number">10+</div>
+                            <div class="stat__label">Projects Built</div>
+                        </div>
+                        <div class="stat" data-scroll data-scroll-speed="1.2">
+                            <div class="stat__number">100</div>
+                            <div class="stat__label">Days of Code</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Three.js 3D Background -->
+                <div class="hero__bg">
+                    <canvas id="webgl"></canvas>
+                </div>
+
+                <div class="scroll-indicator">
+                    <div class="scroll-indicator__line"></div>
+                    <span>Scroll</span>
+                </div>
+            </section>
+
+            <!-- Featured Work -->
+            <section class="work" id="work">
+                <div class="work__header">
+                    <h2 class="section-title">
+                        <div class="line">
+                            <div class="line__inner">Featured</div>
+                        </div>
+                        <div class="line">
+                            <div class="line__inner">Work</div>
+                        </div>
+                    </h2>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="project" data-scroll data-scroll-speed="1">
+                    <div class="project__img">
+                        <div class="project__img-wrapper">
+                            <iframe src="YOUR_COLLEGE_ERP_LIVE_URL_HERE" 
+                                    title="College ERP System Live Demo"
+                                    style="width: 100%; height: 100%; border: none; border-radius: 12px;"
+                                    loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <span class="project__number">01</span>
+                        <h3 class="project__title">College ERP System</h3>
+                        <p class="project__desc">A comprehensive enterprise resource planning system for educational institutions. Features role-based dashboards, real-time analytics, automated workflows, and seamless data management.</p>
+                        <div class="project__tags">
+                            <span>React</span>
+                            <span>Tailwind</span>
+                            <span>Supabase</span>
+                            <span>Recharts</span>
+                        </div>
+                        <a href="#" class="project__link btn-magnetic">
+                            <span>View Project</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project project--reverse" data-scroll data-scroll-speed="1">
+                    <div class="project__img">
+                        <div class="project__img-wrapper">
+                            <div class="img-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <div class="mockup">
+                                    <div class="mockup__header">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="mockup__content">
+                                        <div class="code-line" style="width: 80%"></div>
+                                        <div class="code-line" style="width: 65%"></div>
+                                        <div class="code-line" style="width: 90%"></div>
+                                        <div class="code-line" style="width: 70%"></div>
+                                        <div class="code-line" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <span class="project__number">02</span>
+                        <h3 class="project__title">Smart Contact Manager</h3>
+                        <p class="project__desc">Secure web platform for organizing contacts with advanced search, CRUD operations, and robust authentication. Built with enterprise-grade security and scalability in mind.</p>
+                        <div class="project__tags">
+                            <span>Spring Boot</span>
+                            <span>MySQL</span>
+                            <span>Hibernate</span>
+                            <span>Security</span>
+                        </div>
+                        <a href="#" class="project__link btn-magnetic">
+                            <span>View Project</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project" data-scroll data-scroll-speed="1">
+                    <div class="project__img">
+                        <div class="project__img-wrapper">
+                            <div class="img-placeholder achievement-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <div class="achievement-badge">
+                                    <div class="badge-number">200+</div>
+                                    <div class="badge-label">Problems Solved</div>
+                                    <div class="badge-streak">🔥 100 Day Streak</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <span class="project__number">03</span>
+                        <h3 class="project__title">LeetCode Journey</h3>
+                        <p class="project__desc">Maintained a 100-day coding streak, solving 200+ algorithmic problems. Mastered data structures, algorithms, and optimization techniques through consistent practice and problem-solving.</p>
+                        <div class="project__tags">
+                            <span>Algorithms</span>
+                            <span>Data Structures</span>
+                            <span>Problem Solving</span>
+                            <span>DSA</span>
+                        </div>
+                        <a href="#" class="project__link btn-magnetic">
+                            <span>View Progress</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section - Scroll-Linked Layered Design -->
+            <section class="about" id="about">
+                <!-- Layered content will be dynamically generated by layered-about.js -->
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact" id="contact">
+                <div class="contact__container">
+                    <h2 class="section-title section-title--center">
+                        <div class="line">
+                            <div class="line__inner">Let's Create</div>
+                        </div>
+                        <div class="line">
+                            <div class="line__inner">Something Great</div>
+                        </div>
+                    </h2>
+
+                    <div class="contact__grid">
+                        <a href="mailto:hemantfsu@gmail.com" class="contact__card btn-magnetic">
+                            <div class="contact__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <h3>Email</h3>
+                            <p>hemantfsu@gmail.com</p>
+                        </a>
+
+                        <a href="https://github.com/hemantfsu" target="_blank" class="contact__card btn-magnetic">
+                            <div class="contact__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <h3>GitHub</h3>
+                            <p>@hemantfsu</p>
+                        </a>
+
+                        <a href="https://linkedin.com/in/hemantdhangar" target="_blank" class="contact__card btn-magnetic">
+                            <div class="contact__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <h3>LinkedIn</h3>
+                            <p>@hemantdhangar</p>
+                        </a>
+
+                        <a href="tel:+919927490815" class="contact__card btn-magnetic">
+                            <div class="contact__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <h3>Phone</h3>
+                            <p>+91-9927490815</p>
+                        </a>
+                    </div>
+
+                    <div class="contact__cta">
+                        <p class="large-text">Have a project in mind?</p>
+                        <a href="mailto:hemantfsu@gmail.com" class="btn-primary btn-primary--large btn-magnetic">
+                            <span>Start a Conversation</span>
+                            <svg width="24" height="24" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__left">
+                        <p>&copy; 2025 Hemant Kumar Dhangar</p>
+                        <p>Crafted with passion & precision</p>
+                    </div>
+                    <div class="footer__right">
+                        <a href="#" class="footer__top btn-magnetic" id="backToTop">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19V5m0 0l-7 7m7-7l7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+    <script src="premium-about.js"></script>
+</body>
+</html>
