@@ -1309,6 +1309,11 @@ img, video, canvas, svg {
     transition: all 0.3s;
 }
 
+.footer__top svg {
+    display: block;
+    margin: auto;
+}
+
 .footer__top:hover {
     background: var(--color-accent);
     border-color: var(--color-accent);
