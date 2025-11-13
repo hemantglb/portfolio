@@ -7,19 +7,38 @@
     <meta name="theme-color" content="#6366f1">
     <title>Hemant Kumar Dhangar — Developer & Creative</title>
     
+    <!-- DNS Prefetch for faster external resource loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Preload critical resources -->
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Inter:wght@400;600;700&display=swap" as="style">
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <!-- Critical CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="premium-about.css">
     
-    <!-- Optimized fonts - only essential weights -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Non-critical CSS - load asynchronously -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"></noscript>
+    
+    <!-- Optimized fonts - only essential weights with display=swap -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical inline CSS for above-the-fold content -->
+    <style>
+        body{margin:0;padding:0;overflow-x:hidden;background:#0a0a0f}
+        .loader{position:fixed;top:0;left:0;width:100%;height:100vh;background:#0a0a0f;z-index:9999;display:flex;align-items:center;justify-content:center}
+        .nav{position:fixed;top:0;width:100%;z-index:100;padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;color:#fff}
+        .hero{min-height:100vh;position:relative;display:flex;align-items:center;color:#fff}
+        img{max-width:100%;height:auto}
+    </style>
 </head>
 <body>
     
@@ -138,7 +157,7 @@
                 <div class="project" data-scroll data-scroll-speed="1">
                     <div class="project__img">
                         <div class="project__img-wrapper">
-                            <img src="images/college_erp.png" alt="College ERP System Dashboard" loading="lazy">
+                            <img src="images/college_erp.jpg" alt="College ERP System Dashboard" loading="lazy" width="800" height="600">
                         </div>
                     </div>
                     <div class="project__content">
@@ -164,7 +183,7 @@
                 <div class="project project--reverse" data-scroll data-scroll-speed="1">
                     <div class="project__img">
                         <div class="project__img-wrapper">
-                            <img src="images/smart_contact.png" alt="Smart Contact Manager Dashboard" loading="lazy">
+                            <img src="images/smart_contact.jpg" alt="Smart Contact Manager Dashboard" loading="lazy" width="800" height="600">
                         </div>
                     </div>
                     <div class="project__content">
@@ -190,7 +209,7 @@
                 <div class="project" data-scroll data-scroll-speed="1">
                     <div class="project__img">
                         <div class="project__img-wrapper">
-                            <img src="images/lc.png" alt="LeetCode Journey" loading="lazy">
+                            <img src="images/lc.png" alt="LeetCode Journey" loading="lazy" width="800" height="600">
                         </div>
                     </div>
                     <div class="project__content">
@@ -295,12 +314,23 @@
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="app.js"></script>
-    <script src="premium-about.js"></script>
+    <!-- Deferred Scripts - Load after page render -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="premium-about.js"></script>
+    
+    <!-- Register Service Worker for caching -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
 </body>
 </html>
