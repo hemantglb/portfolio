@@ -11,3 +11,4 @@
 # Temporary files
 *.tmp
 *.temp
+images/*_backup.png
