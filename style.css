@@ -2439,9 +2439,11 @@ img, video, canvas, svg {
     /* Enable simple fade-in animations for mobile - ALL sections */
     .hero__label,
     .hero__title,
+    .hero__text,
     .hero__subtitle,
     .hero__cta,
     .hero__stats,
+    .stat,
     .btn-primary,
     .work__header,
     .project,
@@ -2465,6 +2467,7 @@ img, video, canvas, svg {
         animation-delay: 0.15s;
     }
 
+    .hero__text,
     .hero__subtitle {
         animation-delay: 0.3s;
     }
@@ -2475,6 +2478,18 @@ img, video, canvas, svg {
 
     .hero__stats {
         animation-delay: 0.6s;
+    }
+
+    .stat:nth-child(1) {
+        animation-delay: 0.65s;
+    }
+
+    .stat:nth-child(2) {
+        animation-delay: 0.7s;
+    }
+
+    .stat:nth-child(3) {
+        animation-delay: 0.75s;
     }
 
     .work__header {
@@ -2550,7 +2565,6 @@ img, video, canvas, svg {
         line-height: 1.7;
         margin-bottom: 0;
         display: block;
-        opacity: 1;
         visibility: visible;
     }
 
