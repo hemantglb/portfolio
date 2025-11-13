@@ -478,17 +478,43 @@
     .unique-about {
         padding: 3rem 1rem;
         min-height: auto;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .unique-container {
         width: 100%;
         max-width: 100%;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
-    /* Fix visibility - show content immediately on mobile */
-    [data-reveal] {
+    /* Fix visibility - show ALL content immediately on mobile */
+    [data-reveal],
+    .unique-header,
+    .unique-main,
+    .unified-card,
+    .profile-section,
+    .bio-content,
+    .bio-text,
+    .bottom-grid,
+    .info-box,
+    .achievements-box,
+    .tech-box,
+    .achievement-item,
+    .skill-tag {
         opacity: 1 !important;
         transform: none !important;
+        visibility: visible !important;
+        display: block !important;
+    }
+
+    .profile-section,
+    .bottom-grid,
+    .achievement-list,
+    .skills-container {
+        display: flex !important;
     }
 
     .unique-header {
@@ -508,7 +534,7 @@
         padding: 1.5rem;
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transform: none !important; /* Disable 3D transform on mobile */
+        transform: none !important;
     }
 
     /* Disable hover effects on mobile */

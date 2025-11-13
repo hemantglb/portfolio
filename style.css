@@ -2467,9 +2467,18 @@ img, video, canvas, svg {
     .unique-about,
     .unique-container,
     .unique-header,
-    .unique-main {
+    .unique-main,
+    .unified-card,
+    .profile-section,
+    .bio-content,
+    .bottom-grid,
+    .info-box,
+    .achievement-item,
+    .skill-tag {
         opacity: 1 !important;
         animation: none !important;
+        visibility: visible !important;
+        transform: none !important;
     }
 
     /* Staggered animation delays - faster on mobile */
@@ -2607,31 +2616,41 @@ img, video, canvas, svg {
         font-size: 0.9rem;
     }
 
-    /* Navigation */
+    /* Navigation - Better mobile spacing */
     .nav {
-        padding: 1rem;
+        padding: 1rem 1.5rem;
+        justify-content: space-between;
+        gap: 1rem;
     }
 
     .nav__logo {
         font-size: 1.25rem;
+        flex-shrink: 0;
     }
 
     .nav__menu {
-        gap: 1.5rem;
+        gap: 1rem;
+        flex: 1;
+        justify-content: center;
     }
 
     .nav__link {
-        font-size: 0.9rem;
-        padding: 0.5rem;
+        font-size: 0.85rem;
+        padding: 0.5rem 0.75rem;
         min-height: 44px;
         display: flex;
         align-items: center;
     }
 
+    .nav__cta {
+        flex-shrink: 0;
+    }
+
     .nav__cta a {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
         min-height: 44px;
+        white-space: nowrap;
     }
 
     /* Buttons - Enhanced touch targets */
