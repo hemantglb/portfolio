@@ -2438,7 +2438,6 @@ img, video, canvas, svg {
 
     /* Enable simple fade-in animations for mobile - ALL sections */
     .hero__label,
-    .hero__title,
     .hero__text,
     .hero__subtitle,
     .hero__cta,
@@ -2454,42 +2453,44 @@ img, video, canvas, svg {
     .contact__card,
     .contact__cta,
     .footer {
-        animation: fadeInUp 0.8s ease-out forwards;
+        animation: fadeInUp 0.6s ease-out forwards;
         opacity: 0;
     }
 
-    /* Staggered animation delays */
+    /* Hero title - show immediately without animation on mobile */
+    .hero__title {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+
+    /* Staggered animation delays - faster on mobile */
     .hero__label {
         animation-delay: 0s;
     }
 
-    .hero__title {
-        animation-delay: 0.15s;
-    }
-
     .hero__text,
     .hero__subtitle {
-        animation-delay: 0.3s;
+        animation-delay: 0.1s;
     }
 
     .hero__cta {
-        animation-delay: 0.45s;
+        animation-delay: 0.2s;
     }
 
     .hero__stats {
-        animation-delay: 0.6s;
+        animation-delay: 0.3s;
     }
 
     .stat:nth-child(1) {
-        animation-delay: 0.65s;
+        animation-delay: 0.35s;
     }
 
     .stat:nth-child(2) {
-        animation-delay: 0.7s;
+        animation-delay: 0.4s;
     }
 
     .stat:nth-child(3) {
-        animation-delay: 0.75s;
+        animation-delay: 0.45s;
     }
 
     .work__header {
@@ -2547,6 +2548,16 @@ img, video, canvas, svg {
         line-height: 1;
         margin-bottom: 2rem;
         letter-spacing: -0.02em;
+    }
+
+    /* Ensure title lines are visible on mobile */
+    .hero__title .line {
+        overflow: visible !important;
+    }
+
+    .hero__title .line__inner {
+        transform: none !important;
+        opacity: 1 !important;
     }
 
     .hero__row {
