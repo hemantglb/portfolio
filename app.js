@@ -19,6 +19,14 @@ function initThreeJS() {
         console.error('WebGL canvas not found');
         return;
     }
+
+    // Disable Three.js on mobile for better performance
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+        canvas.style.display = 'none';
+        console.log('Mobile detected: Three.js disabled for performance');
+        return;
+    }
     
     try {
         // Scene
@@ -410,6 +418,17 @@ function initLocomotiveScroll() {
                 console.warn('Smooth content element not found');
                 return;
             }
+
+            // Disable smooth scroll on mobile for better performance
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isMobile) {
+                // Use native scrolling on mobile
+                document.body.style.overflow = 'auto';
+                smoothContent.style.transform = 'none';
+                console.log('Mobile detected: Using native scroll');
+                return;
+            }
         
         scroll = new LocomotiveScroll({
             el: smoothContent,
@@ -418,12 +437,10 @@ function initLocomotiveScroll() {
             lerp: 0.1,
             class: 'is-reveal',
             smartphone: {
-                smooth: true,
-                multiplier: 0.5
+                smooth: false
             },
             tablet: {
-                smooth: true,
-                multiplier: 0.6
+                smooth: false
             }
         });
 

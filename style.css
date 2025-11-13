@@ -1373,6 +1373,33 @@ img, video, canvas, svg {
 }
 
 @media (max-width: 768px) {
+    /* Mobile Performance Optimizations */
+    * {
+        scroll-behavior: auto !important;
+    }
+
+    /* Disable heavy animations for better performance */
+    [data-scroll],
+    [data-scroll-speed] {
+        transform: none !important;
+    }
+
+    .line__inner {
+        transform: translateY(0) !important;
+        animation: none !important;
+    }
+
+    /* Simplify animations */
+    .hero__bg canvas {
+        display: none !important;
+    }
+
+    /* Smooth scrolling optimization */
+    #smooth-wrapper,
+    #smooth-content {
+        transform: none !important;
+    }
+
     .nav__menu {
         display: none;
     }
@@ -2396,9 +2423,24 @@ img, video, canvas, svg {
 @media (max-width: 480px) {
     html {
         font-size: 14px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Disable all scroll-based animations */
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0.2s !important;
     }
 
     /* Hero Section */
+    .hero {
+        min-height: 85vh;
+    }
+
     .hero__title {
         font-size: 2.5rem !important;
         line-height: 1.2;
