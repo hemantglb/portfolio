@@ -136,7 +136,7 @@
         const skillsContainer = document.createElement('div');
         skillsContainer.className = 'skills-container';
 
-        const skills = ['React', 'Node.js', 'JavaScript', 'Python', 'MongoDB', 'Git'];
+        const skills = ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS', 'DSA', 'C/C++', 'Git'];
 
         skills.forEach((skill, index) => {
             const tag = document.createElement('span');
