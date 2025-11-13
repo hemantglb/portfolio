@@ -2519,7 +2519,7 @@ img, video, canvas, svg {
     /* Hero Section - Enhanced sizes */
     .hero {
         min-height: 85vh;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
     }
 
     .hero__label {
@@ -2534,10 +2534,24 @@ img, video, canvas, svg {
         letter-spacing: -0.02em;
     }
 
+    .hero__row {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero__text {
+        max-width: 100%;
+        display: block;
+    }
+
     .hero__subtitle {
         font-size: 1.05rem;
         line-height: 1.7;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
+        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 
     .hero__cta-group {
@@ -2699,11 +2713,11 @@ img, video, canvas, svg {
 
     /* Section spacing */
     .work {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .work__header {
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
 
     .contact {
