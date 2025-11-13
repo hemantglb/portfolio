@@ -546,7 +546,7 @@ img, video, canvas, svg {
    WORK SECTION
    ================================================================= */
 .work {
-    padding: 15rem 4rem;
+    padding: 15rem 4rem 8rem 4rem;
     position: relative;
     z-index: 10;
 }
@@ -825,7 +825,7 @@ img, video, canvas, svg {
    ABOUT SECTION - UNIQUE BENTO GRID DESIGN
    ================================================================= */
 .about {
-    padding: 15rem 4rem;
+    padding: 8rem 4rem 15rem 4rem;
     background: linear-gradient(180deg, #000000 0%, #050505 100%);
     position: relative;
     z-index: 10;
