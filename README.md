@@ -88,7 +88,6 @@ Free to use for personal and commercial projects.
 ## 📧 Contact
 
 - Email: hemantfsu@gmail.com
-- Phone: +91-9927490815
 - GitHub: [github.com/hemantfsu](https://github.com/hemantfsu)
 - LinkedIn: [linkedin.com/in/hemantdhangar](https://linkedin.com/in/hemantdhangar)
 
