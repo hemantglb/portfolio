@@ -485,6 +485,12 @@
         max-width: 100%;
     }
 
+    /* Fix visibility - show content immediately on mobile */
+    [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
     .unique-header {
         margin-bottom: 2rem;
     }
@@ -502,6 +508,12 @@
         padding: 1.5rem;
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: none !important; /* Disable 3D transform on mobile */
+    }
+
+    /* Disable hover effects on mobile */
+    .unified-card:hover {
+        transform: none !important;
     }
 
     .profile-image {

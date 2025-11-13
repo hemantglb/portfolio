@@ -161,6 +161,10 @@
     }
 
     function initInteractions() {
+        // Skip interactions on mobile
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) return;
+
         // Parallax effect on mouse move
         const card = document.querySelector('.unified-card');
         if (!card) return;
@@ -191,6 +195,14 @@
     }
 
     function initScrollReveal() {
+        // Skip reveal animations on mobile - show immediately
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            const elements = document.querySelectorAll('[data-reveal]');
+            elements.forEach(el => el.classList.add('visible'));
+            return;
+        }
+
         const elements = document.querySelectorAll('[data-reveal]');
         
         const observer = new IntersectionObserver((entries) => {
